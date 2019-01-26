@@ -14,11 +14,13 @@
 //= require activestorage
 //= require jquery
 //= require jquery_ujs
-//= reuire jquery-ui
 //= require turbolinks
 //= require popper
 //= require tether
 //= require bootstrap-sprockets
+//= require jquery-ui
 //= require_tree .
 
-
+$(function() {
+  $("#lessons").sortable({});
+});
