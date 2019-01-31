@@ -21,6 +21,4 @@
 //= require jquery-ui
 //= require_tree .
 
-$(function() {
-  $("#lessons").sortable({});
-});
+
