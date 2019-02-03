@@ -5,13 +5,14 @@ class LessonsController < ApplicationController
   def show
   end
 
-  def require_authorized_for_current_lesson
-    if current_lesson.section.course != current_user
-      redirect_to root_url, alert: 'Sign up for the Course!' 
-    end
-  end
 
   private
+
+  def require_authorized_for_current_lesson
+    if current_lesson.section.course.user != current_user
+      redirect_to root_path, alert: 'Sign up for the Course!'
+    end
+  end
 
   helper_method :current_lesson
   def current_lesson
